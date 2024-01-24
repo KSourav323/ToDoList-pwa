@@ -1,0 +1,306 @@
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Fira sans", sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: #FFF;
+	background-color: var(--dark);
+}
+
+header {
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header h1{ 
+	font-size: 2.5rem;
+	font-weight: 300;
+	color: var(--grey);
+	margin-bottom: 1rem;
+}
+
+#new-task-form {
+	display: flex;
+}
+
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+#new-task-input {
+	flex: 1 1 0%;
+	background-color: var(--darker);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: var(--light);
+	font-size: 1.25rem;
+}
+
+#new-task-input::placeholder {
+	color: var(--grey);
+}
+
+#new-task-submit {
+	color: rgb(255, 255, 255);
+	font-size: 1.25rem;
+	padding: 10px 10px 10px 10px;
+	font-weight: 700;
+	background-image: linear-gradient(to right, var(--pink), var(--purple));
+	cursor: pointer;
+	transition: 0.4s;
+	border-radius: 10px;
+	
+}
+
+#new-task-submit:hover {
+	opacity: 0.8;
+}
+
+#new-task-submit:active {
+	opacity: 0.6;
+}
+
+main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.task-list {
+	padding: 1rem;
+	min-height: 270px;
+}
+
+.task-list h2 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: var(--grey);
+	margin-bottom: 1rem;
+}
+
+#tasks .task {
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--darker);
+	padding: 1rem;
+	margin-left: -30px;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+.task .content {
+	flex: 1 1 0%;
+}
+
+.task .content .text {
+	color: var(--light);
+	font-size: 1.125rem;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+}
+
+.task .content .text:not(:read-only) {
+	color: var(--light);
+}
+
+.task .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+.task .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.task .actions button:hover {
+	opacity: 0.8;
+}
+
+.task .actions button:active {
+	opacity: 0.6;
+}
+
+
+.task .actions .delete {
+	color: rgb(190, 85, 105);
+}
+
+
+.navbar {
+	background: linear-gradient(to bottom, var(--darkest), rgb(40, 45, 72));
+	overflow: hidden;
+	color: #8B5CF6;
+	width: 100%;
+	height: 100px;
+}
+
+.navbar a{
+	text-decoration: none;
+	transition: font-size 0.3s ease-in-out;
+}
+
+
+.navbar a:hover{
+	font-size: 1.2em; 
+}
+
+.profilepic{
+	height: 50px;
+	width: 50px;
+}
+
+.navoptions{
+	width: 10%;
+	padding-left: 10px;
+}
+
+.custom-button{
+	margin: 5px;
+	padding: 20px 40px 20px 40px;
+	border-radius: 10px;
+	color: #ffffff;
+	background: linear-gradient(to top, var(--darkest), rgb(40, 45, 72));
+}
+
+.para{
+	color: #ddd;
+}
+
+.logoutbtn{
+	margin: 5px 20px 0px 0px;
+	padding: 20px 40px 20px 40px;
+	border-radius: 10px;
+	color: #ffffff;
+	background: linear-gradient(to bottom, #4d1a1a, rgb(19, 17, 22));
+	transition: font-size 0.3s ease-in-out;
+}
+
+.logoutbtn:hover{
+	font-size: 1.2em; 
+}
+
+.footer{
+	width: 1519px;
+	background: transparent;
+	padding: 30px 0px 40px 0px;
+	align-items: center;
+}
+
+ 
+.dropbtn {
+	background: linear-gradient(to top, var(--darkest), rgb(40, 45, 72));
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	width: 300px;
+	margin-top: 30px;
+	margin-left: 200%;
+	border-radius: 10px;
+  }
+  
+  /* The container <div> - needed to position the dropup content */
+  .dropup {
+	position: relative;
+	display: inline-block;
+  }
+  
+  /* Dropup content (Hidden by Default) */
+  .dropup-content {
+	display: none;
+	position: absolute;
+	bottom: 50px;
+	background: linear-gradient(to bottom, var(--darkest), rgb(40, 45, 72));
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	color: #bfbfbf;
+	border-radius: 20px;
+	margin-left: 200%;
+	padding: 20px 90px 20px 90px;
+  }
+  
+  
+  
+  /* Change color of dropup links on hover */
+  .dropup-content a:hover {background-color: #ddd}
+  
+  /* Show the dropup menu on hover */
+  .dropup:hover .dropup-content {
+	display: block;
+  }
+  
+  /* Change the background color of the dropup button when the dropup content is shown */
+  .dropup:hover .dropbtn {
+	background: linear-gradient(to top, rgb(41, 41, 41),rgb(19, 17, 22));
+  }
+
+
+
+@media screen and (max-width: 767px) {
+	
+	body {
+		width: 100%;
+	}
+	
+	#new-task-input {
+		padding:2rem;
+	}
+	
+	.task-list {
+		padding: 1rem;
+		min-height: 450px;
+	}
+
+	.custom-button{
+		margin: 2px;
+		padding: 10px 10px 10px 10px;
+	}
+	
+	.logoutbtn{
+		margin: 0px 10px 0px 0px;
+		padding: 10px 10px 10px 10px;
+		border-radius: 10px;
+	}
+	
+	.footer{
+		width: 400px;
+	}
+	
+	.dropbtn {
+		margin-left: 19%;
+	  }
+	  
+	  .dropup-content {
+		margin-left: 19%;
+	  }
+
+}
